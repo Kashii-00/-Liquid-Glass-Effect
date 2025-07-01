@@ -3,7 +3,7 @@
 import { Geist } from "next/font/google"
 import { useState, useRef, useEffect } from "react"
 import LiquidGlass from "liquid-glass-react"
-import { LogOutIcon, Github, Home as HomeIcon, Newspaper, Trophy, Headphones, Search } from "lucide-react"
+import { LogOutIcon,Home as HomeIcon, Newspaper, Trophy, Headphones, Search } from "lucide-react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
