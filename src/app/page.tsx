@@ -1,9 +1,9 @@
 "use client"
 
 import { Geist } from "next/font/google"
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef } from "react"
 import LiquidGlass from "liquid-glass-react"
-import { LogOutIcon,Home as HomeIcon, Newspaper, Trophy, Headphones} from "lucide-react"
+import { LogOutIcon } from "lucide-react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,9 +23,6 @@ export default function Home() {
 
   const containerRef = useRef<HTMLDivElement>(null)
   const [scroll, setScroll] = useState(0)
-  const [activeTab, setActiveTab] = useState(0)
-  const tabsRef = useRef<(HTMLButtonElement | null)[]>([])
-  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 })
   const [textColorClass, setTextColorClass] = useState("text-white")
   const [subTextColorClass, setSubTextColorClass] = useState("text-white/80")
 
@@ -56,45 +53,6 @@ export default function Home() {
   }
 
   const scrollingOverBrightSection = scroll > 230 && scroll < 500
-
-  const tabs = [
-    { icon: HomeIcon, label: "Today" },
-    { icon: Newspaper, label: "News+" },
-    { icon: Trophy, label: "Sports" },
-    { icon: Headphones, label: "Audio" },
-  ]
-
-  // Update indicator position when active tab changes
-  useEffect(() => {
-    const updateIndicatorPosition = () => {
-      const activeTabElement = tabsRef.current[activeTab]
-      if (activeTabElement) {
-        const { offsetLeft, offsetWidth } = activeTabElement
-        setIndicatorStyle({
-          left: offsetLeft,
-          width: offsetWidth,
-        })
-      }
-    }
-
-    // Small delay to ensure DOM is updated
-    const timer = setTimeout(updateIndicatorPosition, 50)
-    return () => clearTimeout(timer)
-  }, [activeTab])
-
-  // Set initial position
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const activeTabElement = tabsRef.current[0]
-      if (activeTabElement) {
-        setIndicatorStyle({
-          left: activeTabElement.offsetLeft,
-          width: activeTabElement.offsetWidth,
-        })
-      }
-    }, 100)
-    return () => clearTimeout(timer)
-  }, [])
 
   return (
     <div className={`${geistSans.className} w-full h-screen overflow-hidden font-[family-name:var(--font-geist-sans)]`}>
