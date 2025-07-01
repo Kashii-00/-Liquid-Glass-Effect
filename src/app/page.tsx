@@ -3,7 +3,7 @@
 import { Geist } from "next/font/google"
 import { useState, useRef, useEffect } from "react"
 import LiquidGlass from "liquid-glass-react"
-import { LogOutIcon,Home as HomeIcon, Newspaper, Trophy, Headphones, Search } from "lucide-react"
+import { LogOutIcon,Home as HomeIcon, Newspaper, Trophy, Headphones} from "lucide-react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,7 +31,8 @@ export default function Home() {
 
   const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {
     requestAnimationFrame(() => {
-      const scrollTop = (event?.target as any)?.scrollTop || 0
+      const target = event?.target as HTMLDivElement
+      const scrollTop = target?.scrollTop || 0
       setScroll(scrollTop)
       
       // Determine text color based on scroll position
@@ -186,8 +187,6 @@ export default function Home() {
             <LogOutIcon className={`w-5 h-5 transition-colors duration-500 ${textColorClass}`} />
           </h3>
         </LiquidGlass>
-
-
       </div>
     </div>
   )
