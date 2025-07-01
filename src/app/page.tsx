@@ -97,22 +97,22 @@ export default function Home() {
                   textColorClass === "text-white" ? "bg-white/20 text-white" : "bg-gray-900/20 text-gray-900"
                 }`}>JD</div>
                 <div>
-                  <p className={`font-medium transition-colors duration-500 ${textColorClass}`}>John Doe</p>
+                  <p className={`font-medium transition-colors duration-500 ${textColorClass}`}>Kashika Hettihea</p>
                   <p className={`text-sm transition-colors duration-500 ${subTextColorClass}`}>Software Engineer</p>
                 </div>
               </div>
               <div className="pt-2 space-y-2">
                 <div className="flex justify-between">
                   <span className={`text-sm transition-colors duration-500 ${subTextColorClass}`}>Email:</span>
-                  <span className={`text-sm transition-colors duration-500 ${textColorClass}`}>john.doe@example.com</span>
+                  <span className={`text-sm transition-colors duration-500 ${textColorClass}`}>kashikabanu@gmail.com</span>
                 </div>
                 <div className="flex justify-between">
                   <span className={`text-sm transition-colors duration-500 ${subTextColorClass}`}>Location:</span>
-                  <span className={`text-sm transition-colors duration-500 ${textColorClass}`}>San Francisco, CA</span>
+                  <span className={`text-sm transition-colors duration-500 ${textColorClass}`}>Colombo, CA</span>
                 </div>
                 <div className="flex justify-between">
                   <span className={`text-sm transition-colors duration-500 ${subTextColorClass}`}>Joined:</span>
-                  <span className={`text-sm transition-colors duration-500 ${textColorClass}`}>March 2023</span>
+                  <span className={`text-sm transition-colors duration-500 ${textColorClass}`}>March 2025</span>
                 </div>
               </div>
             </div>
