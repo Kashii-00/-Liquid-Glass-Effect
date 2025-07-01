@@ -4,7 +4,7 @@
 <div align="center">
 
 
-# -LIQUID-GLASS-EFFECT
+# LIQUID-GLASS-EFFECT
 
 <em>Transforming Visuals into Immersive Experiences</em>
 
